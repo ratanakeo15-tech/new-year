@@ -1,58 +1,63 @@
-<div class="box relative w-full h-screen flex flex-col justify-center items-center bg-gray-900 text-red-500 overflow-hidden">
-  <img  class="w-[200px]" src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHIxbGZzZTA4dXFqNjNqZjB0aTVkZ29wczRoZGNicHFsNXFvZmJ5dyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/H6uHVXDSubhDM3gbsu/giphy.gif" alt="">
-  <h1 class="flex items-center text-[200px] font-extrabold mb-16">
+<div class="box relative w-full h-screen flex flex-col justify-center items-center bg-gray-900 text-white overflow-hidden px-4 md:px-0">
+
+  <!-- Top GIF -->
+  <img class="w-32 md:w-[200px] mb-4 md:mb-8" 
+       src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHIxbGZzZTA4dXFqNjNqZjB0aTVkZ29wczRoZGNicHFsNXFvZmJ5dyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/H6uHVXDSubhDM3gbsu/giphy.gif" 
+       alt="New Year GIF">
+
+  <!-- Year Header -->
+  <h1 class="flex flex-col md:flex-row items-center text-[120px] md:text-[200px] text-[50px] font-extrabold mb-8 md:mb-16 text-white">
     2
-    <mat-icon class="mat-custom mx-2 text-yellow-400 animate-bounce">vpn_lock</mat-icon>
+    <mat-icon class="mat-custom mx-1 md:mx-2 text-yellow-400 animate-bounce">vpn_lock</mat-icon>
     {{ year % 100 }}
   </h1>
 
   <!-- Countdown Boxes -->
-  <div class="w-full countdown flex flex-wrap justify-center gap-6">
-    <img  class="w-[200px]" src="https://media2.giphy.com/media/5mNMeL6eVxAYQhxpkA/source.gif" alt="">
+  <div class="w-full countdown flex flex-wrap justify-center gap-2 md:gap-6">
+    <!-- Optional GIF inside countdown -->
+    <img class="w-24 md:w-[200px]" src="https://media2.giphy.com/media/5mNMeL6eVxAYQhxpkA/source.gif" alt="Countdown GIF">
+
     <!-- Days -->
-    <div class="time-box bg-gradient-to-br from-pink-500 to-red-500 shadow-2xl rounded-3xl p-8 flex flex-col items-center transform transition-transform duration-500 hover:scale-105 animate-pulse">
-      <span class="time-number text-6xl font-extrabold text-white">{{days}}</span>
-      <span class="time-label text-lg font-semibold tracking-wider text-white">Days</span>
+    <div class="time-box bg-gradient-to-br from-pink-500 to-red-500 shadow-2xl rounded-2xl md:rounded-3xl p-4 md:p-8 flex flex-col items-center transform transition-transform duration-500 hover:scale-105 animate-pulse">
+      <span class="time-number text-4xl md:text-6xl font-extrabold text-white">{{days}}</span>
+      <span class="time-label text-sm md:text-lg font-semibold tracking-wider text-white">Days</span>
     </div>
 
     <!-- Hours -->
-    <div class="time-box bg-gradient-to-br from-purple-500 to-indigo-500 shadow-2xl rounded-3xl p-8 flex flex-col items-center transform transition-transform duration-500 hover:scale-105 animate-pulse delay-100">
-      <span class="time-number text-6xl font-extrabold text-white">{{hours}}</span>
-      <span class="time-label text-lg font-semibold tracking-wider text-white">Hours</span>
+    <div class="time-box bg-gradient-to-br from-purple-500 to-indigo-500 shadow-2xl rounded-2xl md:rounded-3xl p-4 md:p-8 flex flex-col items-center transform transition-transform duration-500 hover:scale-105 animate-pulse delay-100">
+      <span class="time-number text-4xl md:text-6xl font-extrabold text-white">{{hours}}</span>
+      <span class="time-label text-sm md:text-lg font-semibold tracking-wider text-white">Hours</span>
     </div>
 
     <!-- Minutes -->
-    <div class="time-box bg-gradient-to-br from-blue-400 to-cyan-500 shadow-2xl rounded-3xl p-8 flex flex-col items-center transform transition-transform duration-500 hover:scale-105 animate-pulse delay-200">
-      <span class="time-number text-6xl font-extrabold text-white">{{minutes}}</span>
-      <span class="time-label text-lg font-semibold tracking-wider text-white">Minutes</span>
+    <div class="time-box bg-gradient-to-br from-blue-400 to-cyan-500 shadow-2xl rounded-2xl md:rounded-3xl p-4 md:p-8 flex flex-col items-center transform transition-transform duration-500 hover:scale-105 animate-pulse delay-200">
+      <span class="time-number text-4xl md:text-6xl font-extrabold text-white">{{minutes}}</span>
+      <span class="time-label text-sm md:text-lg font-semibold tracking-wider text-white">Minutes</span>
     </div>
 
     <!-- Seconds -->
-    <div class="time-box bg-gradient-to-br from-green-400 to-lime-500 shadow-2xl rounded-3xl p-8 flex flex-col items-center transform transition-transform duration-500 hover:scale-105 animate-pulse delay-300">
-      <span class="time-number text-6xl font-extrabold text-white">{{seconds}}</span>
-      <span class="time-label text-lg font-semibold tracking-wider text-white">Seconds</span>
+    <div class="time-box bg-gradient-to-br from-green-400 to-lime-500 shadow-2xl rounded-2xl md:rounded-3xl p-4 md:p-8 flex flex-col items-center transform transition-transform duration-500 hover:scale-105 animate-pulse delay-300">
+      <span class="time-number text-4xl md:text-6xl font-extrabold text-white">{{seconds}}</span>
+      <span class="time-label text-sm md:text-lg font-semibold tracking-wider text-white">Seconds</span>
     </div>
+  </div>
 
+  <!-- Dotted Progress Bar -->
+  <div class="flex space-x-2 mt-5 flex-wrap justify-center">
+    <div class="w-4 h-4 md:w-6 md:h-6 bg-blue-500 rounded-full animate-pulse"></div>
+    <div class="w-4 h-4 md:w-6 md:h-6 bg-blue-500 rounded-full animate-pulse delay-100"></div>
+    <div class="w-4 h-4 md:w-6 md:h-6 bg-blue-500 rounded-full animate-pulse delay-200"></div>
+    <div class="w-4 h-4 md:w-6 md:h-6 bg-gray-300 rounded-full"></div>
+    <div class="w-4 h-4 md:w-6 md:h-6 bg-gray-300 rounded-full"></div>
   </div>
-   <!-- Dotted Progress Bar with Pulsing Effect -->
-    <div class="flex space-x-2 mt-5">
-        <div class="w-6 h-6 bg-blue-500 rounded-full animate-pulse"></div>
-        <div class="w-6 h-6 bg-blue-500 rounded-full animate-pulse delay-100"></div>
-        <div class="w-6 h-6 bg-blue-500 rounded-full animate-pulse delay-200"></div>
-        <div class="w-6 h-6 bg-gray-300 rounded-full"></div>
-        <div class="w-6 h-6 bg-gray-300 rounded-full"></div>
-    </div>
-       <!-- Step Progress Bar with Animated Transition -->
-    <div class="flex items-center w-full max-w-md mt-5">
-        <div class="w-8 h-8 flex items-center justify-center bg-blue-500 text-white rounded-full animate-bounce">1</div>
-        <div class="h-1 flex-1 bg-blue-500 animate-pulse"></div>
-        <div class="w-8 h-8 flex items-center justify-center bg-blue-500 text-white rounded-full animate-bounce delay-100">2</div>
-        <div class="h-1 flex-1 bg-gray-300"></div>
-        <div class="w-8 h-8 flex items-center justify-center bg-gray-300 text-gray-500 border border-gray-300 rounded-full">3</div>
-    </div>
-    
-  <!-- Optional Confetti -->
-  <div class="absolute inset-0 pointer-events-none">
-    <!-- You can add a confetti canvas or animation here -->
+
+  <!-- Step Progress Bar -->
+  <div class="flex flex-wrap items-center w-full max-w-md mt-5 justify-center">
+    <div class="w-6 h-6 md:w-8 md:h-8 flex items-center justify-center bg-blue-500 text-white rounded-full animate-bounce">1</div>
+    <div class="h-1 flex-1 md:h-1 bg-blue-500 animate-pulse mx-1 md:mx-2"></div>
+    <div class="w-6 h-6 md:w-8 md:h-8 flex items-center justify-center bg-blue-500 text-white rounded-full animate-bounce delay-100">2</div>
+    <div class="h-1 flex-1 md:h-1 bg-gray-300 mx-1 md:mx-2"></div>
+    <div class="w-6 h-6 md:w-8 md:h-8 flex items-center justify-center bg-gray-300 text-gray-500 border border-gray-300 rounded-full">3</div>
   </div>
+
 </div>
